@@ -7,8 +7,13 @@ import VotingComponent from './components/VotingComponent';
 import ResultsComponent from './components/ResultsComponent';
 import ManagementComponent from './components/ManagementComponent';
 
+// Define interfaces or types if necessary for props or state
+interface IAppState {
+    web3: Web3 | null;
+}
+
 function App() {
-    const [web3, setWeb3] = useState(null);
+    const [web3, setWeb3] = useState<Web3 | null>(null);
 
     useEffect(() => {
         const loadWeb3 = async () => {
